@@ -1,15 +1,15 @@
-AGUA REPARTO - VERSION INSTALABLE (PWA)
+AGUA REPARTO - VERSION CON SINCRONIZACION EN LA NUBE
 
-Incluye la aplicacion y soporte de instalacion/offline.
+Esta versión requiere configurar primero la base de datos con el archivo setup_supabase.sql.
+No subas este archivo de instrucciones ni el SQL al sitio público de la aplicación.
 
-IMPORTANTE: para instalarla como app y activar el modo offline, debe publicarse en una direccion HTTPS. Abrir index.html directamente funciona como archivo, pero no activa el service worker.
+IMPORTANTE:
+- Cada persona tendrá una cuenta individual creada desde Supabase > Authentication > Users.
+- No habilites el registro público de usuarios.
+- El trigger de la base de datos incorpora automáticamente cada cuenta creada al espacio Agua Reparto.
+- Los usuarios pueden crear y modificar clientes, cambiar precios y registrar/eliminar movimientos.
+- No se concede permiso para eliminar clientes.
+- Se requiere conexión a internet para consultar y guardar datos compartidos.
+- El respaldo se descarga desde la pestaña Respaldo.
 
-Publicacion gratuita sugerida: GitHub Pages.
-1. Crear/iniciar sesion en github.com
-2. Crear repositorio nuevo (por ejemplo agua-reparto).
-3. Subir TODOS los archivos de esta carpeta, con index.html en la raiz.
-4. En Settings > Pages, elegir Deploy from a branch, branch main y carpeta /root, guardar.
-5. Esperar la URL HTTPS publicada. Abrir esa URL en PC/celular.
-6. En Chrome, menu (tres puntos) > Instalar aplicacion o Agregar a pantalla principal.
-
-Los datos de la app se guardan en el almacenamiento local del navegador/dispositivo. No se sincronizan entre PC y celular automaticamente. Hacer copias de seguridad desde la app.
+La URL del proyecto y la publishable key están configuradas en index.html. La publishable key está diseñada para usarse en el navegador; la seguridad real depende de las políticas RLS instaladas por el SQL. Nunca agregues una secret key ni service_role al archivo.
