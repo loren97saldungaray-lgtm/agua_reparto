@@ -1,0 +1,15 @@
+AGUA REPARTO - VERSION INSTALABLE (PWA)
+
+Incluye la aplicacion y soporte de instalacion/offline.
+
+IMPORTANTE: para instalarla como app y activar el modo offline, debe publicarse en una direccion HTTPS. Abrir index.html directamente funciona como archivo, pero no activa el service worker.
+
+Publicacion gratuita sugerida: GitHub Pages.
+1. Crear/iniciar sesion en github.com
+2. Crear repositorio nuevo (por ejemplo agua-reparto).
+3. Subir TODOS los archivos de esta carpeta, con index.html en la raiz.
+4. En Settings > Pages, elegir Deploy from a branch, branch main y carpeta /root, guardar.
+5. Esperar la URL HTTPS publicada. Abrir esa URL en PC/celular.
+6. En Chrome, menu (tres puntos) > Instalar aplicacion o Agregar a pantalla principal.
+
+Los datos de la app se guardan en el almacenamiento local del navegador/dispositivo. No se sincronizan entre PC y celular automaticamente. Hacer copias de seguridad desde la app.
